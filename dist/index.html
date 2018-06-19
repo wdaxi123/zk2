@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + 'px'
+    </script>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="warp">
+        <div class="content">
+            <h4 class="header">
+                必买大牌
+            </h4>
+            <ul class="list">
+                <img src="img/1.jpg" alt="">
+            </ul>
+        </div>
+        <script id="list" type="text/x-handlebars-template">
+            {{#each this}}
+            <li>
+                <img src="{{img}}" alt="">
+                <span>{{title}}</span>
+            </li>
+            {{/each }}
+        </script>
+    </div>
+    <script src="js/lib/require.js"></script>
+    <script>
+        require(['js/main'], function() {
+            require(['index'])
+        })
+    </script>
+</body>

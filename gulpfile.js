@@ -11,8 +11,25 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('src/css'))
 })
 
+gulp.task('alljs', function() {
+    gulp.src('src/**/*.js')
+        .pipe(gulp.dest('dist'))
+})
+gulp.task('allimg', function() {
+    gulp.src('src/**/*.jpg')
+        .pipe(gulp.dest('dist'))
+})
+gulp.task('allcss', function() {
+    gulp.src('src/**/*.css')
+        .pipe(gulp.dest('dist'))
+})
+gulp.task('allhtml', function() {
+    gulp.src('src/**/*.html')
+        .pipe(gulp.dest('dist'))
+})
+
 gulp.task('server', function() {
-    gulp.src('src')
+    gulp.src('dist')
         .pipe(server({
             port: 8080,
             open: true,
@@ -32,4 +49,4 @@ gulp.task('server', function() {
 })
 
 
-gulp.task('default', ['sass', 'server'])
+gulp.task('default', ['sass', 'server', 'alljs', 'allimg', 'allhtml', 'allcss'])
