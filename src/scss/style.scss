@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: .32rem;
+}
+
+html,
+body,
+.wrap {
+    width: 100%;
+    height: 100%;
+    background: red;
+    .content {
+        width: 100%;
+        .header {
+            width: 100%;
+            height: .8rem;
+            text-align: center;
+            line-height: .8rem;
+        }
+        .list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            padding: 0 .2rem;
+            li {
+                width: 32%;
+                box-sizing: border-box;
+                margin: .02rem .02rem;
+                background: #fff;
+                border-radius: 3px;
+                overflow: hidden;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+                span {
+                    color: red;
+                    display: block;
+                    text-align: center;
+                    font-size: .3rem;
+                }
+            }
+        }
+    }
+}
